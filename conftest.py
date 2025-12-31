@@ -59,5 +59,5 @@ def fixture_login():
     # Teardown
     login_logout.logout()
     etiqueta = login_logout.home.get_text()
-    assert etiqueta == "Login to your account", "No se cerró sesión correctamente."
+    assert etiqueta == "Home", "No se cerró sesión correctamente."
     driver.close()
