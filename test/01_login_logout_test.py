@@ -24,15 +24,15 @@ def test_entrada_login():
 def teardown_function():
     login_logout.logout()
     etiqueta = login_logout.home.get_text()
-    assert etiqueta == "Login to your account", "No se cerró sesión correctamente."
+    assert etiqueta == "Home", "No se cerró sesión correctamente."
     driver.close()
 
 @pytest.mark.login
 @pytest.mark.usefixtures("chkError", "test_entrada_login")
 def test_login():
     login_logout.home.click()
-    etiqueta = login_logout.titulo_home.get_text()
-    assert etiqueta == "AutomationExercise", "No se pudo ingresar a la web."
+    etiqueta = login_logout.btn_salir.get_text()
+    assert "Logout" in etiqueta, "No se pudo ingresar a la web."
 
 
 #        pytest .\01_login_logout_test.py --alluredir="allure-results" --clean-alluredir

@@ -26,6 +26,8 @@ class PoLoginLogout(PageFactory):
         me.get_screen_shot(self.name)
 
     def login(self, nombre_usuario, clave):
+        self.btn_login.element_to_be_clickable()
+        self.btn_login.click()
         self.usuario.set_text(nombre_usuario)
         self.password.element_to_be_clickable()
         self.password.set_text(clave)
@@ -38,8 +40,8 @@ class PoLoginLogout(PageFactory):
 
     def logout(self):
         self.home.click()
-        self.boton_salir.element_to_be_clickable()
+        self.btn_salir.element_to_be_clickable()
         me.get_screen_shot(self.name)
-        self.boton_salir.click()
+        self.btn_salir.click()
         self.home.element_to_be_clickable()
         me.get_screen_shot(self.name)
