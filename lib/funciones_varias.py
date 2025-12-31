@@ -30,7 +30,12 @@ def get_datos():
         "usr": "automation@automationexercise.com",
         "pwd": "automation9090",
         "url": "https://automationexercise.com/",
-        "url_api": "https://automationexercise.com/api/productsList"
+        "url_api": "https://automationexercise.com/api/productsList",
+        "nombre_tarjeta": "Python Automation Bootcamp",
+        "numero_tarjeta": "4111111111111111",
+        "cvc": "311",
+        "venc_mes": "12",
+        "venc_anio": "2030"
     }
     return datos
 
