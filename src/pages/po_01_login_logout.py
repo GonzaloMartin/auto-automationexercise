@@ -15,6 +15,7 @@ class PoLoginLogout(PageFactory):
         "usuario":       ("XPATH", "//section[@id='form']/div[@class='container']/div[@class='row']/div[@class='col-sm-4 col-sm-offset-1']/div[@class='login-form']/form/input[2]"),
         "password":      ("XPATH", "//section[@id='form']/div[@class='container']/div[@class='row']/div[@class='col-sm-4 col-sm-offset-1']/div[@class='login-form']/form/input[3]"),
         "boton_login":   ("XPATH", "//section[@id='form']/div[@class='container']/div[@class='row']/div[@class='col-sm-4 col-sm-offset-1']/div[@class='login-form']/form/button[@class='btn btn-default']"),
+        "titulo_home":   ("XPATH", "//div[@id='slider-carousel']/div[@class='carousel-inner']/div[@class='item active']/div[@class='col-sm-6'][1]/h1/span"),
         "btn_salir":     ("XPATH", "//header[@id='header']/div[@class='header-middle']/div[@class='container']/div[@class='row']/div[@class='col-sm-8']/div[@class='shop-menu pull-right']/ul[@class='nav navbar-nav']/li[4]/a"),
     }
 
