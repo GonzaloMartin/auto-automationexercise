@@ -1,5 +1,6 @@
 from conftest import *
 from src.pages.po_02_productos import *
+from src.pages.po_03_carrito import *
 from lib.funciones_varias import *
 
 @pytest.fixture()
@@ -9,9 +10,10 @@ def chkError(request):
     
 @pytest.fixture(scope="function")
 def test_productos(fixture_login):
-    global me, producto
+    global me, producto, carrito
 
     producto = PoProductos(fixture_login.driver)
+    carrito = PoCarrito(producto.driver)
     producto.ingresar_productos()
 
 @pytest.mark.comprar_producto_ok
@@ -20,9 +22,9 @@ def test_comprar_producto_ok():
     producto.filtrar_seleccion()
     producto.elegir_producto()
     item = producto.agregar_carrito()
-
     assert item == "Sleeves Printed Top - White", "El producto agregado al carrito no es el esperado."
 
-
-#        pytest .\01_login_logout_test.py --alluredir="allure-results" --clean-alluredir
-#        allure generate --single-file .\allure-results\
+    carrito.ingresar_carrito()
+    item_carrito = carrito.validar_item()
+    assert item_carrito == item, "El producto en el carrito no es el esperado."
+    carrito.proceder_checkout(comentario="Compra de prueba automatizada OK.")
