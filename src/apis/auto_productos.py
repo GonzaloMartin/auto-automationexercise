@@ -11,7 +11,7 @@ def srv_productos():
     """
 
     dato = get_datos()
-    url = dato['url_api'] if dato['ambiente'] != "dev" else None  # No hay endpoint dev para esta API pública
+    url = dato['url_api_productos'] if dato['ambiente'] != "dev" else None  # No hay endpoint dev para esta API pública
 
     headers = {
         'Accept': 'application/json',
