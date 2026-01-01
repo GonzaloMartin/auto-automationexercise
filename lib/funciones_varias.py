@@ -31,7 +31,7 @@ def get_datos():
         "pwd": "automation9090",
         "url": "https://automationexercise.com/",
         "url_api_productos": "https://automationexercise.com/api/productsList",
-        "url_api_buscar": "https://automationexercise.com/api/productsList",
+        "url_api_buscar": "https://automationexercise.com/api/searchProduct",
         "nombre_tarjeta": "Python Automation Bootcamp",
         "numero_tarjeta": "4111111111111111",
         "cvc": "311",
