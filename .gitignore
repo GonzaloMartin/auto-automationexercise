@@ -1,0 +1,19 @@
+##############################################
+###              .gitignore                ###
+##############################################
+
+# Basuras de Pycharm
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Reportes de Allure (de momento no subir a git)
+allureRep/
+allure-report/
+allure-results/
+*.xml
+
+# Customs
+.idea/
+venv/
+.venv/
