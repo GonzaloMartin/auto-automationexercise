@@ -10,7 +10,6 @@ class PoProductos(PageFactory):
 
 
     locators = {
-        # Productos
         "btn_home":            ("XPATH", "//header[@id='header']/div[@class='header-middle']/div[@class='container']/div[@class='row']/div[@class='col-sm-8']/div[@class='shop-menu pull-right']/ul[@class='nav navbar-nav']/li[1]/a"),
         "btn_productos":       ("XPATH", "//header[@id='header']/div[@class='header-middle']/div[@class='container']/div[@class='row']/div[@class='col-sm-8']/div[@class='shop-menu pull-right']/ul[@class='nav navbar-nav']/li[2]/a"),
         "txt_buscar":          ("ID", "search_product"),
@@ -23,25 +22,6 @@ class PoProductos(PageFactory):
         "btn_agregar_carrito": ("XPATH", "/html/body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='product-details']/div[@class='col-sm-7']/div[@class='product-information']/span/button[@class='btn btn-default cart']"),
         "lbl_agregado_ok":     ("XPATH", "//div[@id='cartModal']/div[@class='modal-dialog modal-confirm']/div[@class='modal-content']/div[@class='modal-header']/h4[@class='modal-title w-100']"),
         "btn_continuar":       ("XPATH", "//div[@id='cartModal']/div[@class='modal-dialog modal-confirm']/div[@class='modal-content']/div[@class='modal-footer']/button[@class='btn btn-success close-modal btn-block']"),
-
-        # Carrito
-        "btn_carrito":         ("XPATH", "//header[@id='header']/div[@class='header-middle']/div[@class='container']/div[@class='row']/div[@class='col-sm-8']/div[@class='shop-menu pull-right']/ul[@class='nav navbar-nav']/li[3]/a"),
-        "tabla_carrito":       ("XPATH", "//table[@id='cart_info_table']/thead/tr[@class='cart_menu']/td[@class='image']"),
-        "item_carrito":        ("XPATH", "//tr[@id='product-11']/td[@class='cart_description']/h4/a"),
-        "btn_checkout":        ("XPATH", "//section[@id='do_action']/div[@class='container']/div[@class='row']/div[@class='col-sm-6']/a[@class='btn btn-default check_out']"),
-        "lbl_revisar_carrito": ("XPATH", "//section[@id='cart_items']/div[@class='container']/div[@class='step-one'][2]/h2[@class='heading']"),
-        "txt_comentario":      ("XPATH", "//div[@id='ordermsg']/textarea[@class='form-control']"),
-        "btn_proceder":        ("XPATH", "//section[@id='cart_items']/div[@class='container']/div[7]/a[@class='btn btn-default check_out']"),
-
-        # Pago
-        "lbl_pago":            ("XPATH", "//section[@id='cart_items']/div[@class='container']/div[@class='step-one']/h2[@class='heading']"),
-        "txt_nombre_tarjeta":  ("XPATH", "//label[normalize-space(text())='Name on Card']/following-sibling::input"),
-        "txt_numero_tarjeta":  ("XPATH", "//label[normalize-space(text())='Card Number']/following-sibling::input"),
-        "txt_cvc":             ("XPATH", "//label[normalize-space(text())='CVC']/following-sibling::input"),
-        "txt_venc_mes":        ("XPATH", "//label[normalize-space(text())='Expiration']/following::input[1]"),
-        "txt_venc_anio":       ("XPATH", "//label[normalize-space(text())='Expiration']/following::input[2]"),
-        "btn_pagar":           ("ID", "submit"),
-        "lbl_compra_ok":       ("XPATH", "//section[@id='form']/div[@class='container']/div[@class='row']/div[@class='col-sm-9 col-sm-offset-1']/h2[@class='title text-center']/b"),
     }
     
     def ingresar_productos(self):
