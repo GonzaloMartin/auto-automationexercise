@@ -26,7 +26,7 @@ class PoPagar(PageFactory):
         return etiqueta
 
     def ingresar_datos_pago(self, nombre_tarjeta, numero_tarjeta, cvc, venc_mes, venc_anio):
-        self.txt_nombre_tarjeta.wait_until_visible()
+        self.txt.nombre_tarjeta.element_to_be_clickable()
         self.txt_nombre_tarjeta.send_keys(nombre_tarjeta)
         self.txt_numero_tarjeta.send_keys(numero_tarjeta)
         self.txt_cvc.send_keys(cvc)
