@@ -19,6 +19,7 @@ def test_productos(fixture_login):
     pago = PoPagar(fixture_login.driver)
     producto.ingresar_productos()
 
+@pytest.mark.front
 @pytest.mark.comprar_producto_ok
 @pytest.mark.usefixtures("chkError", "test_productos")
 def test_comprar_producto_ok():

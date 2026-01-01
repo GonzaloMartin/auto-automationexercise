@@ -2,7 +2,7 @@ import pytest, allure
 from src.apis.auto_productos import *
 from src.apis.auto_buscar_productos import *
 
-
+@pytest.mark.api
 @pytest.mark.productos
 @allure.feature("Productos")
 @allure.parent_suite("Todos los Productos")
@@ -25,7 +25,7 @@ def test_productos():
         else:
             pytest.fail("No existe el campo 'accessToken' en la respuesta.")
 
-
+@pytest.mark.api
 @pytest.mark.buscar_productos
 @allure.feature("Productos")
 @allure.parent_suite("Buscar Productos")

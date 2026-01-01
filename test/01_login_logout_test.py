@@ -27,6 +27,7 @@ def teardown_function():
     assert etiqueta == "Home", "No se cerró sesión correctamente."
     driver.close()
 
+@pytest.mark.front
 @pytest.mark.login
 @pytest.mark.usefixtures("chkError", "test_entrada_login")
 def test_login():
